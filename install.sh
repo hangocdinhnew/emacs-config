@@ -15,7 +15,7 @@ for FILE in "${FILES[@]}"; do
   SOURCE="$CONFIG_DIR/$FILE"
 
   if [ -e "$TARGET" ] || [ -L "$TARGET" ]; then
-    mv -v "$TARGET" "$TARGET.bak"
+    rm -rf "$TARGET"
   fi
 
   ln -sv "$SOURCE" "$TARGET"
