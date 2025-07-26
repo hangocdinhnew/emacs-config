@@ -129,8 +129,3 @@
   (doom-modeline-major-mode-icon t)
   (doom-modeline-minor-modes nil)
   (doom-modeline-buffer-file-name-style 'truncate-upto-project))
-
-; LSPs
-(add-hook 'rust-ts-mode-hook #'lsp)
-(add-hook 'c-ts-mode-hook #'lsp)
-(add-hook 'c++-ts-mode-hook #'lsp)
