@@ -7,6 +7,11 @@
 (setq backup-directory-alist
       `((".*" . ,(expand-file-name "~/.emacs.d/backups/"))))
 
+(electric-pair-mode 1)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq-default standard-indent 2)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq evil-want-integration t)

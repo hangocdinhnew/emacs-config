@@ -66,7 +66,7 @@
   (setq lsp-enable-symbol-highlighting t
 	lsp-enable-snippet t
 	lsp-headerline-breadcrumb-enable t
-	lsp-idle-delay 0.500
+	lsp-idle-delay 0.1
 	lsp-log-io nil))
 
 (use-package lsp-ui
@@ -86,8 +86,8 @@
   (global-corfu-mode)
   :custom
   (corfu-cycle t)
-  (corfu-auto t)                 
-  (corfu-auto-delay 0.2)
+  (corfu-auto t)
+  (corfu-auto-delay 0.01)
   (corfu-auto-prefix 1)
   (corfu-quit-no-match 'separator)
   (corfu-preview-current 'insert)
@@ -129,3 +129,11 @@
   (doom-modeline-major-mode-icon t)
   (doom-modeline-minor-modes nil)
   (doom-modeline-buffer-file-name-style 'truncate-upto-project))
+
+; LSP
+(with-eval-after-load 'lsp-mode
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection "jdtls")
+    :activation-fn (lsp-activate-on "java")
+    :server-id 'jdtls-server)))
