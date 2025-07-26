@@ -15,7 +15,7 @@ for FILE in "${FILES[@]}"; do
   SOURCE="$CONFIG_DIR/$FILE"
 
   if [ -e "$TARGET" ] || [ -L "$TARGET" ]; then
-    rm -rf "$TARGET"
+    rm -rfv "$TARGET"
   fi
 
   ln -sv "$SOURCE" "$TARGET"

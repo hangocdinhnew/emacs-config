@@ -131,6 +131,6 @@
   (doom-modeline-buffer-file-name-style 'truncate-upto-project))
 
 ; LSPs
-(use-package rust-mode
-  :ensure t
-  :hook (rust-mode . lsp))
+(add-hook 'rust-ts-mode-hook #'lsp)
+(add-hook 'c-ts-mode-hook #'lsp)
+(add-hook 'c++-ts-mode-hook #'lsp)

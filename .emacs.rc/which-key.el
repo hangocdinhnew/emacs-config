@@ -47,6 +47,8 @@
 (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
 (define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
 
+(global-set-key (kbd "C-x b") #'consult-buffer)
+
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "C-c w") #'wdired-change-to-wdired-mode))
 
