@@ -13,6 +13,9 @@
 (unless (treesit-language-available-p 'rust)
   (treesit-install-language-grammar 'rust))
 
+(unless (treesit-language-available-p 'java)
+  (treesit-install-language-grammar 'java))
+
 (setq major-mode-remap-alist
       '((c-mode          . c-ts-mode)
         (c++-mode        . c++-ts-mode)
