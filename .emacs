@@ -7,7 +7,6 @@
 (load "~/.emacs.rc/rc.el")
 (load "~/.emacs.rc/config.el")
 (load "~/.emacs.rc/language.el")
-(load "~/.emacs.rc/treesitter.el")
 (load "~/.emacs.rc/packages.el")
 
 (require 'use-package)

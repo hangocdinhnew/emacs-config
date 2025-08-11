@@ -29,16 +29,7 @@
 (define-key my-leader-map (kbd "p b") #'projectile-switch-to-buffer)
 (define-key my-leader-map (kbd "p g") #'projectile-grep)
 
-(define-key evil-normal-state-map (kbd "gd") #'lsp-find-definition)
-(define-key evil-normal-state-map (kbd "gD") #'lsp-find-declaration)
-(define-key evil-normal-state-map (kbd "gr") #'lsp-find-references)
-(define-key evil-normal-state-map (kbd "K") #'lsp-ui-doc-show)
-
-(define-key my-leader-map (kbd "c r") #'lsp-rename)
-(define-key my-leader-map (kbd "c a") #'lsp-execute-code-action)
-(define-key my-leader-map (kbd "c f") #'lsp-format-buffer)
-(define-key my-leader-map (kbd "c c") #'compile)
-(define-key my-leader-map (kbd "c d") #'flycheck-list-errors)
+(define-key my-leader-map (kbd "c c") #'projectile-compile-project)
 
 (define-key my-leader-map (kbd "g g") #'magit)
 
@@ -46,6 +37,16 @@
 (define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
 (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
 (define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
+
+(define-key evil-visual-state-map (kbd ">") (lambda ()
+  (interactive)
+  (evil-shift-right (region-beginning) (region-end))
+  (evil-visual-restore)))
+
+(define-key evil-visual-state-map (kbd "<") (lambda ()
+  (interactive)
+  (evil-shift-left (region-beginning) (region-end))
+  (evil-visual-restore)))
 
 (global-set-key (kbd "C-x b") #'consult-buffer)
 

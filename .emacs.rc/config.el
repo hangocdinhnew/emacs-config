@@ -9,8 +9,9 @@
 
 (electric-pair-mode 1)
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-(setq-default standard-indent 2)
+(setq-default tab-width 4)
+(setq-default standard-indent 4)
+(setq-default evil-shift-width tab-width)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -24,27 +25,3 @@
 (set-face-attribute 'default nil :family "Hack Nerd Font Mono" :height 180 :weight 'bold)
 
 (setq projectile-completion-system 'default)
-
-; LSP
-
-(setq lsp-completion-provider :capf)
-(setq lsp-diagnostics-provider :flycheck)
-
-(setq lsp-enable-folding nil
-      lsp-enable-text-document-color nil)
-
-(setq lsp-enable-on-type-formatting nil)
-
-(setq lsp-headerline-breadcrumb-enable nil)
-
-(setq lsp-ui-doc-enable t
-      lsp-ui-doc-position 'at-point
-      lsp-ui-sideline-enable t
-      lsp-ui-sideline-show-diagnostics t
-      lsp-ui-sideline-show-code-actions t)
-
-(setq lsp-enable-snippet t)
-(setq lsp-headerline-breadcrumb-enable t)
-(setq lsp-idle-delay 0.1)
-
-(setq lsp-log-io t)
