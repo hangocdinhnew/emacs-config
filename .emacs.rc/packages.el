@@ -3,6 +3,11 @@
   :config
   (load-theme 'gruvbox-dark-medium t))
 
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 (use-package vertico
   :ensure t
   :init (vertico-mode))
