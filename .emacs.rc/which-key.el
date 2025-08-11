@@ -12,7 +12,7 @@
 
 (define-key my-leader-map (kbd "f f") #'find-file)
 (define-key my-leader-map (kbd "f d") #'dired)
-(define-key my-leader-map (kbd "b") #'consult-buffer)
+(define-key my-leader-map (kbd ",") #'consult-buffer)
 (define-key my-leader-map (kbd "k") #'ibuffer)
 
 (define-key my-leader-map (kbd "e a") #'embark-act)
