@@ -20,8 +20,6 @@
 (unless (treesit-language-available-p 'java)
   (treesit-install-language-grammar 'java))
 
-(add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-ts-mode))
-
 (setq major-mode-remap-alist
       '((c-mode          . c-ts-mode)
         (c++-mode        . c++-ts-mode)

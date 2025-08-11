@@ -6,12 +6,10 @@
 (setq custom-file "~/.emacs.custom.el")
 (load "~/.emacs.rc/rc.el")
 (load "~/.emacs.rc/config.el")
+(load "~/.emacs.rc/language.el")
 (load "~/.emacs.rc/treesitter.el")
 (load "~/.emacs.rc/packages.el")
 
 (require 'use-package)
 
 (load "~/.emacs.rc/which-key.el")
-
-(add-to-list 'load-path "~/.emacs.rc/local/")
-(require 'c3-mode)
