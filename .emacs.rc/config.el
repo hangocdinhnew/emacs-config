@@ -10,8 +10,10 @@
 (electric-pair-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq-default standard-indent 4)
+(setq-default standard-indent tab-width)
 (setq-default evil-shift-width tab-width)
+
+(setq-default c-basic-offset tab-width)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
