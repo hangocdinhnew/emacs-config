@@ -30,6 +30,7 @@
 (define-key my-leader-map (kbd "p g") #'projectile-grep)
 
 (define-key my-leader-map (kbd "c c") #'projectile-compile-project)
+(define-key my-leader-map (kbd "c r") #'recompile)
 
 (define-key my-leader-map (kbd "g g") #'magit)
 
