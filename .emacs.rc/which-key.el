@@ -37,6 +37,8 @@
 (define-key my-leader-map (kbd "s j") #'split-window-below)
 (define-key my-leader-map (kbd "s l") #'split-window-right)
 
+(define-key my-leader-map (kbd "!") #'shell-command)
+
 (define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
 (define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
 (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
