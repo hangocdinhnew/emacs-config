@@ -14,6 +14,7 @@
 (setq evil-want-integration t)
 (setq evil-want-keybinding nil)
 (setq evil-snipe-scope 'whole-buffer)
+(setq evil-want-C-u-scroll t)
 
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t)
