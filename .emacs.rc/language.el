@@ -26,3 +26,4 @@
 
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
+(require 'odin-mode)
