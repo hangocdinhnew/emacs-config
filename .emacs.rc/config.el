@@ -19,6 +19,6 @@
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode t)
 
-(set-face-attribute 'default nil :family "Hack Nerd Font Mono" :height 180 :weight 'bold)
+(set-face-attribute 'default nil :family "Hack Nerd Font Mono" :height 140 :weight 'bold)
 
 (setq projectile-completion-system 'default)
