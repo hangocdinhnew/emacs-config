@@ -23,3 +23,5 @@
 (set-face-attribute 'default nil :family "Hack Nerd Font Mono" :height 140 :weight 'bold)
 
 (setq projectile-completion-system 'default)
+
+(setq evil-undo-system 'undo-redo)
