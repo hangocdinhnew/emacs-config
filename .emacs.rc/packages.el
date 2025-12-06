@@ -57,6 +57,12 @@
   :config
   (evil-collection-init))
 
+(use-package evil-mc
+  :ensure t
+  :after (evil)
+  :config
+  (global-evil-mc-mode 1))
+
 (use-package projectile
   :ensure t
   :diminish projectile-mode
