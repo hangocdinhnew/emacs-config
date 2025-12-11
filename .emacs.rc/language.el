@@ -18,11 +18,16 @@
   :ensure t
   :defer t)
 
+(use-package haxe-mode
+  :ensure t
+  :defer t)
+
 (require 'rust-mode)
 (require 'lua-mode)
 (require 'cmake-mode)
 (require 'zig-mode)
 (require 'swift-mode)
+(require 'haxe-mode)
 
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
