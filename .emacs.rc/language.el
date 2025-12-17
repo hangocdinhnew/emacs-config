@@ -22,12 +22,17 @@
   :ensure t
   :defer t)
 
+(use-package racket-mode
+  :ensure t
+  :defer t)
+
 (require 'rust-mode)
 (require 'lua-mode)
 (require 'cmake-mode)
 (require 'zig-mode)
 (require 'swift-mode)
 (require 'haxe-mode)
+(require 'racket-mode)
 
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
