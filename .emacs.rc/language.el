@@ -26,6 +26,10 @@
   :ensure t
   :defer t)
 
+(use-package nix-mode
+  :ensure t
+  :defer t)
+
 (require 'rust-mode)
 (require 'lua-mode)
 (require 'cmake-mode)
@@ -33,6 +37,7 @@
 (require 'swift-mode)
 (require 'haxe-mode)
 (require 'racket-mode)
+(require 'nix-mode)
 
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
