@@ -30,9 +30,13 @@
   :ensure t
   :defer t)
 
-(setq treesit-language-source-alist
-      '((qml "https://github.com/yuja/tree-sitter-qml")))
-(add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-ts-mode))
+(use-package qml-ts-mode
+  :mode "\\.qml\\'"
+  :config
+  (add-hook 'qml-ts-mode-hook
+            (lambda ()
+              (setq-local electric-indent-chars
+                          '(?\n ?\( ?\) ?{ ?} ?\[ ?\] ?\; ?,)))))
 
 (require 'rust-mode)
 (require 'lua-mode)
