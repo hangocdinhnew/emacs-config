@@ -31,8 +31,9 @@
   :defer t)
 
 (setq treesit-language-source-alist
-      '((qml "https://github.com/yuja/tree-sitter-qml")))
-(add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-ts-mode))
+      '((qml "https://github.com/yuja/tree-sitter-qmljs")))
+(unless (treesit-language-available-p 'qml)
+  (treesit-install-language-grammar 'qml))
 
 (require 'rust-mode)
 (require 'lua-mode)
@@ -46,4 +47,5 @@
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
 (require 'odin-mode)
+(require 'qml-ts-mode)
 
