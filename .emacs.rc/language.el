@@ -30,14 +30,6 @@
   :ensure t
   :defer t)
 
-(use-package qml-ts-mode
-  :mode "\\.qml\\'"
-  :config
-  (add-hook 'qml-ts-mode-hook
-            (lambda ()
-              (setq-local electric-indent-chars
-                          '(?\n ?\( ?\) ?{ ?} ?\[ ?\] ?\; ?,)))))
-
 (require 'rust-mode)
 (require 'lua-mode)
 (require 'cmake-mode)
@@ -50,4 +42,3 @@
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
 (require 'odin-mode)
-
