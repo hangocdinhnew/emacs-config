@@ -30,6 +30,10 @@
   :ensure t
   :defer t)
 
+(use-package csharp-mode
+  :ensure t
+  :defer t)
+
 (require 'rust-mode)
 (require 'lua-mode)
 (require 'cmake-mode)
@@ -38,6 +42,7 @@
 (require 'haxe-mode)
 (require 'racket-mode)
 (require 'nix-mode)
+(require 'csharp-mode)
 
 (add-to-list 'load-path "~/.emacs.rc/local/")
 (require 'c3-mode)
