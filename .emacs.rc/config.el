@@ -2,6 +2,9 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+(setq inhibit-startup-message t)
+(setq initial-scratch-message nil)
+
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name "~/.emacs.d/autosaves/") t)))
 
