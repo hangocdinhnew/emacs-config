@@ -15,7 +15,11 @@
  '("9" . meow-digit-argument)
  '("0" . meow-digit-argument)
  '("/" . meow-keypad-describe-key)
- '("?" . meow-cheatsheet))
+ '("?" . meow-cheatsheet)
+ '("h" . #'windmove-left)
+ '("j" . #'windmove-down)
+ '("k" . #'windmove-up)
+ '("l" . #'windmove-right))
 (meow-normal-define-key
  '("0" . meow-expand-0)
  '("9" . meow-expand-9)
@@ -38,7 +42,8 @@
  '("b" . meow-back-word)
  '("B" . meow-back-symbol)
  '("c" . meow-change)
- '("d" . meow-kill)
+ '("d" . meow-delete)
+ '("D" . meow-kill)
  '("e" . meow-next-word)
  '("E" . meow-next-symbol)
  '("f" . meow-find)
@@ -77,7 +82,4 @@
  '("'" . repeat)
  '("<escape>" . ignore))
 
-(define-key meow-leader-keymap (kbd "h") #'windmove-left)
-(define-key meow-leader-keymap (kbd "j") #'windmove-down)
-(define-key meow-leader-keymap (kbd "k") #'windmove-up)
-(define-key meow-leader-keymap (kbd "l") #'windmove-right)
+
