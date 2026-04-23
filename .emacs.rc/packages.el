@@ -34,34 +34,16 @@
   :after (embark consult)
   :defer t)
 
-(use-package evil
+(use-package meow
   :ensure t
   :init
   :config
-  (evil-mode t))
+  (require 'meow)
+  (meow-global-mode 1))
 
 (use-package magit
   :ensure t
   :defer t)
-
-(use-package evil-snipe
-  :ensure t
-  :after evil
-  :config
-  (evil-snipe-mode +1)
-  (evil-snipe-override-mode +1))
-
-(use-package evil-collection
-  :ensure t
-  :after (evil)
-  :config
-  (evil-collection-init))
-
-(use-package evil-mc
-  :ensure t
-  :after (evil)
-  :config
-  (global-evil-mc-mode 1))
 
 (use-package projectile
   :ensure t
