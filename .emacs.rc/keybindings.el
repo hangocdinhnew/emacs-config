@@ -85,8 +85,8 @@
  '("Y" . meow-sync-grab)
  '("z" . meow-pop-selection)
  '("'" . repeat)
- '("{" . forward-paragraph)
- '("}" . backward-paragraph)
+ '("{" . backward-paragraph)
+ '("}" . forward-paragraph)
  '("<escape>" . ignore))
 
 
