@@ -16,6 +16,8 @@
  '("0" . meow-digit-argument)
  '("/" . meow-keypad-describe-key)
  '("?" . meow-cheatsheet)
+ '("cc" . projectile-compile-project)
+ '("xb" . consult-buffer)
  '("wh" . windmove-left)
  '("wj" . windmove-down)
  '("wk" . windmove-up)
@@ -83,6 +85,8 @@
  '("Y" . meow-sync-grab)
  '("z" . meow-pop-selection)
  '("'" . repeat)
+ '("{" . forward-paragraph)
+ '("}" . backward-paragraph)
  '("<escape>" . ignore))
 
 
