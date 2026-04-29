@@ -11,4 +11,5 @@
 
 (require 'use-package)
 
+(load "~/.emacs.rc/which-key.el")
 (load "~/.emacs.rc/keybindings.el")
