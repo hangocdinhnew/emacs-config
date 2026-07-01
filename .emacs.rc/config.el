@@ -2,7 +2,7 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
