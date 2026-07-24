@@ -6,7 +6,6 @@ CONFIG_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 FILES=(
   ".emacs"
-  ".emacs.custom.el"
   ".emacs.rc"
 )
 
