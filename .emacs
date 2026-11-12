@@ -7,9 +7,8 @@
 (load "~/.emacs.rc/rc.el")
 (load "~/.emacs.rc/config.el")
 (load "~/.emacs.rc/language.el")
-(load "~/.emacs.rc/packages.el")
-
 (require 'use-package)
+(load "~/.emacs.rc/packages.el")
 
 (load "~/.emacs.rc/which-key.el")
 (load "~/.emacs.rc/keybindings.el")

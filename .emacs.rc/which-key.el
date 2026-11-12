@@ -1,7 +1,11 @@
+;;; which-key.el --- No summary.
+;;; Commentary:
+;;; Code:
+
 (which-key-mode)
 
-(setq which-key-idle-delay 0.8    
-      which-key-separator " → "   
+(setq which-key-idle-delay 0.8
+      which-key-separator " → "
       which-key-prefix-prefix "+")
 
 (defvar my-leader-map (make-sparse-keymap)
@@ -68,3 +72,6 @@
   "SPC c" "Code"
   "SPC g" "Magit"
   "SPC s" "Split Pane")
+
+(provide 'which-key-config)
+;;; which-key.el ends here

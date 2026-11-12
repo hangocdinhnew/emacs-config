@@ -1,3 +1,7 @@
+;; packages.el -- No summary
+;;; Commentary:
+;;; Code:
+
 (use-package gruvbox-theme
   :ensure t
   :config
@@ -14,8 +18,12 @@
 
 (use-package orderless
   :ensure t
+
   :custom
-  (completion-styles '(orderless)))
+  (completion-styles '(orderless basic))
+  (completion-category-defaults nil)
+  (completion-category-overrides '((file (styles partial-completion))))
+  )
 
 (use-package marginalia
   :ensure t
@@ -81,3 +89,50 @@
   (doom-modeline-major-mode-icon t)
   (doom-modeline-minor-modes nil)
   (doom-modeline-buffer-file-name-style 'truncate-upto-project))
+
+(use-package corfu
+  :ensure t
+  
+  :custom
+  (corfu-auto t)
+  (corfu-auto-delay 0.0)
+  (corfu-auto-prefix 1)
+  (corfu-cycle t)
+  
+  :init
+  (global-corfu-mode)
+
+  (corfu-history-mode)
+  (corfu-mouse-mode)
+  )
+
+(use-package cape
+  :ensure t
+  
+  :init
+  (add-to-list 'completion-at-point-functions
+               #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions
+               #'cape-file)
+  )
+
+
+(use-package yasnippet
+  :ensure t
+  
+  :hook
+  (prog-mode . yas-minor-mode)
+  (text-mode . yas-minor-mode)
+  )
+
+(use-package flycheck
+  :ensure t
+  :hook (
+         (after-init . global-flycheck-mode)
+         (after-init . global-flycheck-annotate-mode))
+  :config
+  (global-flycheck-eglot-mode 1)
+  )
+
+(provide 'packages)
+;;; packages.el ends here

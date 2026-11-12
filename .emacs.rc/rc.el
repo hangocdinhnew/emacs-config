@@ -1,3 +1,7 @@
+;;; rc.el --- No summary.
+;;; Commentary:
+;;; Code:
+
 (require 'package)
 
 (setq package-archives
@@ -11,3 +15,6 @@
 
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
+
+(provide 'rc)
+;;; rc.el ends here

@@ -1,8 +1,13 @@
+;;; config.el --- No summary.
+;;; Commentary:
+;;; Code:
+
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
 (setq-default indent-tabs-mode nil)
+(setq-default tab_width 4)
 
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
@@ -30,3 +35,6 @@
 (setq projectile-completion-system 'default)
 
 (setq evil-undo-system 'undo-redo)
+
+(provide 'config)
+;;; config.el ends here

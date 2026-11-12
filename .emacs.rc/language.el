@@ -1,49 +1,18 @@
-(use-package rust-mode
-  :ensure t
-  :defer t)
+;;; language.el --- No summary.
+;;; Commentary:
+;;; Code:
 
-(use-package lua-mode
-  :ensure t
-  :defer t)
+(require 'eglot)
+(require 'flymake)
 
-(use-package cmake-mode
-  :ensure t
-  :defer t)
+(setq flymake-inline-diagnostics 'fancy)
 
-(use-package zig-mode
-  :ensure t
-  :defer t)
+(setq major-mode-remap-alist
+      '((c-mode . c-ts-mode)
+        (c++-mode . c++-ts-mode)
+        ))
 
-(use-package swift-mode
-  :ensure t
-  :defer t)
+(add-hook 'c-ts-mode-hook #'eglot-ensure)
 
-(use-package haxe-mode
-  :ensure t
-  :defer t)
-
-(use-package racket-mode
-  :ensure t
-  :defer t)
-
-(use-package nix-mode
-  :ensure t
-  :defer t)
-
-(use-package csharp-mode
-  :ensure t
-  :defer t)
-
-(require 'rust-mode)
-(require 'lua-mode)
-(require 'cmake-mode)
-(require 'zig-mode)
-(require 'swift-mode)
-(require 'haxe-mode)
-(require 'racket-mode)
-(require 'nix-mode)
-(require 'csharp-mode)
-
-(add-to-list 'load-path "~/.emacs.rc/local/")
-(require 'c3-mode)
-(require 'odin-mode)
+(provide 'language)
+;;; language.el ends here
