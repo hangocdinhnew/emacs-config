@@ -5,6 +5,14 @@
 (require 'eglot)
 (require 'flymake)
 
+(use-package zig-ts-mode
+  :ensure t
+  :vc ( :url "https://codeberg.org/meow_king/zig-ts-mode"
+        :rev :newest))
+
+(use-package rust-mode
+  :ensure t)
+
 (setq flymake-inline-diagnostics 'fancy)
 
 (setq major-mode-remap-alist
@@ -12,7 +20,15 @@
         (c++-mode . c++-ts-mode)
         ))
 
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '((zig-ts-mode) . ("zls"))
+               ))
+
 (add-hook 'c-ts-mode-hook #'eglot-ensure)
+(add-hook 'c++-ts-mode-hook #'eglot-ensure)
+(add-hook 'zig-ts-mode-hook #'eglot-ensure)
+(add-hook 'rust-mode-hook #'eglot-ensure)
 
 (provide 'language)
 ;;; language.el ends here
