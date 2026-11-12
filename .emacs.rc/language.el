@@ -18,6 +18,7 @@
 (setq major-mode-remap-alist
       '((c-mode . c-ts-mode)
         (c++-mode . c++-ts-mode)
+        (rust-mode . rust-ts-mode)
         ))
 
 (with-eval-after-load 'eglot
@@ -28,7 +29,7 @@
 (add-hook 'c-ts-mode-hook #'eglot-ensure)
 (add-hook 'c++-ts-mode-hook #'eglot-ensure)
 (add-hook 'zig-ts-mode-hook #'eglot-ensure)
-(add-hook 'rust-mode-hook #'eglot-ensure)
+(add-hook 'rust-ts-mode-hook #'eglot-ensure)
 
 (provide 'language)
 ;;; language.el ends here
