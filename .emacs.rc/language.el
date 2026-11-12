@@ -24,7 +24,15 @@
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
                '((zig-ts-mode) . ("zls"))
-               ))
+               )
+  (add-to-list 'eglot-server-programs
+               '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd" "--background-index" "--clang-tidy"))
+               )
+  (add-to-list 'eglot-server-programs
+               '((rust-ts-mode rust-mode) . ("rust-analyzer"
+                                             :initializationOptions
+                                             (:check (:command "clippy")))))
+  )
 
 (add-hook 'c-ts-mode-hook #'eglot-ensure)
 (add-hook 'c++-ts-mode-hook #'eglot-ensure)
