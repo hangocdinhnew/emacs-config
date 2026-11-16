@@ -7,9 +7,10 @@
 (setq custom-file "~/.emacs.custom.el")
 (load "~/.emacs.rc/rc.el")
 (load "~/.emacs.rc/config.el")
-(load "~/.emacs.rc/language.el")
+
 (require 'use-package)
 (load "~/.emacs.rc/packages.el")
-
 (load "~/.emacs.rc/which-key.el")
 (load "~/.emacs.rc/keybindings.el")
+
+(load "~/.emacs.rc/language.el")

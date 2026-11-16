@@ -23,6 +23,8 @@
   :ensure t)
 
 (require 'jai-mode)
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(d-dmd)))
 
 (setq flymake-inline-diagnostics 'fancy)
 
@@ -47,8 +49,9 @@
                                              :initializationOptions
                                              (:check (:command "clippy")))))
   (add-to-list 'eglot-server-programs
-               '((jai-mode) . ("jailsp"))
-               )
+               '((jai-mode) . ("jailsp")))
+  (add-to-list 'eglot-server-programs
+               '((d-mode) . ("serve-d")))
   )
 
 (add-hook 'c-ts-mode-hook #'eglot-ensure)
@@ -58,6 +61,7 @@
 (add-hook 'nim-mode-hook #'eglot-ensure)
 (add-hook 'dart-mode-hook #'eglot-ensure)
 (add-hook 'jai-mode-hook #'eglot-ensure)
+(add-hook 'd-mode-hook #'eglot-ensure)
 
 (provide 'language)
 ;;; language.el ends here
