@@ -7,8 +7,7 @@
 
 (use-package zig-ts-mode
   :ensure t
-  :vc ( :url "https://codeberg.org/meow_king/zig-ts-mode"
-        :rev :newest))
+  )
 
 (use-package rust-mode
   :ensure t)
@@ -36,9 +35,6 @@
 
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
-               '((zig-ts-mode) . ("zls"))
-               )
-  (add-to-list 'eglot-server-programs
                '((nim-mode) . ("nimlangserver"))
                )
   (add-to-list 'eglot-server-programs
@@ -54,7 +50,6 @@
 
 (add-hook 'c-ts-mode-hook #'eglot-ensure)
 (add-hook 'c++-ts-mode-hook #'eglot-ensure)
-(add-hook 'zig-ts-mode-hook #'eglot-ensure)
 (add-hook 'rust-ts-mode-hook #'eglot-ensure)
 (add-hook 'nim-mode-hook #'eglot-ensure)
 (add-hook 'dart-mode-hook #'eglot-ensure)
