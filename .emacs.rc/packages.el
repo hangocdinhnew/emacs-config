@@ -134,5 +134,9 @@
   (global-flycheck-eglot-mode 1)
   )
 
+(use-package eldoc-box
+  :ensure t
+  )
+
 (provide 'packages)
 ;;; packages.el ends here

@@ -49,6 +49,8 @@
 (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
 (define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
 
+(define-key evil-normal-state-map (kbd "K") #'eldoc-box-help-at-point)
+
 (define-key evil-visual-state-map (kbd ">") (lambda ()
   (interactive)
   (evil-shift-right (region-beginning) (region-end))

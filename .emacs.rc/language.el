@@ -5,7 +5,7 @@
 (require 'eglot)
 (require 'flymake)
 
-(use-package zig-ts-mode
+(use-package zig-mode
   :ensure t
   )
 
@@ -38,6 +38,9 @@
                '((nim-mode) . ("nimlangserver"))
                )
   (add-to-list 'eglot-server-programs
+               '((zig-mode) . ("zigscient"))
+               )
+  (add-to-list 'eglot-server-programs
                '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd" "--background-index" "--clang-tidy"))
                )
   (add-to-list 'eglot-server-programs
@@ -54,6 +57,7 @@
 (add-hook 'nim-mode-hook #'eglot-ensure)
 (add-hook 'dart-mode-hook #'eglot-ensure)
 (add-hook 'jai-mode-hook #'eglot-ensure)
+(add-hook 'zig-mode-hook #'eglot-ensure)
 
 (provide 'language)
 ;;; language.el ends here
