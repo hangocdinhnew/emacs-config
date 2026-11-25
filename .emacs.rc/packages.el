@@ -136,7 +136,7 @@
 
 (use-package eldoc-box
   :ensure t
-  )
+  :hook (eglot-managed-mode-hook . eldoc-box-hover-mode))
 
 (provide 'packages)
 ;;; packages.el ends here
